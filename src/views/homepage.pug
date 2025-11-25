@@ -10,6 +10,33 @@ include ../includes/head
     <!-- Hero Section: sección principal visual que aparece al entrar al sitio -->
     +hero_section("assets/img/icons/mirror_ball.webp", "La noche nunca termina", "Tu acceso VIP al mejor underground electrónico")
 
+    <!-- Sección de búsqueda principal: permite filtrar eventos -->
+    <section class="main-search">
+
+        <!-- Campo de texto para escribir el nombre del evento -->
+        <input type="text" class="search-input" placeholder="¿Qué evento buscas?">
+
+        <!-- Menú desplegable para seleccionar el género musical -->
+        <select class="search-select">
+            <option>Géneros</option>
+            <option>Techno</option>
+            <option>House</option>
+            <option>Trance</option>
+            <option>Drum & Bass</option>
+            <option>Progressive</option>
+        </select>
+
+        <!-- Segundo campo de texto para escribir la ciudad del evento -->
+        <input type="text" class="search-input" placeholder="Ciudad">
+
+        <!-- Botón de acción para ejecutar la búsqueda -->
+        <button class="search-button"><img src="#{base}assets/img/icons/fire.webp" width="30" alt="telemoji fire" style="position: absolute;margin-left: -21px;margin-top: -6px">&nbsp&nbsp Buscar</button>
+
+        <!-- Descripción más extensa que da contexto al contenido -->
+        <p class="subtitle">Descubre las fiestas más exclusivas, DJs internacionales y la escena electrónica más vibrante de tu ciudad.</p>
+
+    </section>
+
     <!-- Sección de estadísticas: muestra números impresionantes de la plataforma -->
     <section class="stats-section">
 
