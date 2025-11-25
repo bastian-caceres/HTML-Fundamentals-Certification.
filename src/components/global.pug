@@ -1,13 +1,40 @@
+//- 🏠 Sección: Portada Homepage ---------------------------------------------------------->
+
+mixin hero_section(icon_path, title, subtitle)
+    <section class="hero">
+
+        <img src="#{base}#{icon_path}" width="140">
+
+        <!-- Título principal que capta la atención del visitante -->
+        <h1>#{title}</h1>
+
+        <!-- Subtítulo breve que refuerza el concepto del sitio -->
+        <p class="tagline">#{subtitle}</p>
+
+    </section>
 
 
-mixin example_component_use( parameter_1 , parameter_2)
-    - const variable = 'Example Variable'
+//- 🏠 Sección: Categorías de Eventos ----------------------------------------------------->
 
-    <ul>
-        <li>#{ parameter_1 }</li>
-        <li>#{ parameter_2 }</li>
-        <li>#{ variable }</li>
-    </ul>
+mixin card_event_category(name, description)
+    <div class="genre-card">
+        <h3 class="genre-name">#{ Capitalize(name) }</h3>
+        <p class="genre-description">#{ description }</p>
+    </div>
 
+//- 🏠 Sección: Grilla de Eventos ----------------------------------------------------->
 
-
+mixin card_event( title, date, place, event_time, genre, price_from )
+    <a href="evento/#{ Convert_URL(title) }" class="event-card">
+        <div class="event-image"></div>
+        <div class="event-info">
+            <h3 class="event-title">#{title}</h3>
+            <div class="event-details">
+                <p>#{Date_Long(date)}</p>
+                <p>#{place}</p>
+                <p>#{event_time}</p>
+                <p>#{genre}</p>
+            </div>
+            <div class="event-price">Desde #{Format_CLP(price_from)}</div>
+        </div>
+    </a>
